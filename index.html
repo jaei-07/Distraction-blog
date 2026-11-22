@@ -207,17 +207,60 @@
         </div>
       </div>
     </section>
-  <img src="https://www.wikihow.com/Use-Forest-Productivity-App">
 
-   <h2>1. Forest (Focus Timer App)</h2>
-            <p>
-                Forest is a gamified Pomodoro timer that keeps you off your phone while reviewing lectures or working on lab exercises. You set a timer—say, 25 or 50 minutes—and plant a virtual tree that grows only if you stay inside the app.
-            </p>
-            <p>
-                <strong>Why it works in college:</strong> Between class breaks and late-night study sessions, checking social media becomes automatic; Forest breaks that muscle memory by making your study streak visual and rewarding.
-            </p>
-</section>
+    <section class="page" id="intro">
+      <div class="intro-box">
+        <img src="images/image2.jpeg" alt="Headphones">
+        <div class="text">
+          <h2>Introduction</h2>
+          <p>College comes with a level of freedom that makes staying focused harder than ever. Between heavy coding or study workloads, group chat notifications, and endless scrolling between classes, it is easy to lose hours without finishing a single task.</p>
+          <p>I chose to write about minimizing distractions in college academics because learning how to protect my focus completely changed how I handle exam weeks and project deadlines. Whether you are a freshman adjusting to independent study or an upperclassman juggling major subjects, having a solid system keeps you from burning out on late-night cramming.</p>
+          <p>Here are five practical tools and habits I recommend to help you stay locked in throughout college.</p>
+        </div>
+        <div class="thumbs">
+          <img src="images/image1.jpeg" alt="Forest" onclick="openTool('forest')">
+          <img src="images/image2.jpeg" alt="Headphones" onclick="openTool('headphones')">
+          <img src="images/image3.jpeg" alt="Grayscale" onclick="openTool('grayscale')">
+        </div>
+      </div>
+    </section>
 
+    <section class="page" id="detail">
+      <div class="detail">
+        <img id="detailImg" src="" alt="">
+        <div class="text">
+          <h2 id="detailName"></h2>
+          <p id="detailText"></p>
+        </div>
+      </div>
+      <button id="downBtn" onclick="scrollDown()" title="Scroll down">&darr;</button>
+      <div id="moreText">
+        <h3 id="moreLabel"></h3>
+        <p id="moreBody"></p>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="page" id="search">
+      <h2>Search</h2>
+      <input type="text" id="searchBox" placeholder="Type a tool, like forest or headphones..." oninput="doSearch()">
+      <div id="results"></div>
+    </section>
+
+    <section class="page" id="about">
+      <div class="about">
+        <div class="circles">
+          <img src="images/image2.jpeg" alt="Headphones">
+          <img src="images/image3.jpeg" alt="Grayscale phone">
+        </div>
+        <div class="text">
+          <h2>About</h2>
+          <p>Made by <b>Jaybe A. Dela Cruz</b> (ITE-10 FVLM1).</p>
+          <p>This page is about minimizing distractions in college academics. Learning how to protect my focus changed how I handle exam weeks and project deadlines, so I wanted to share the tools that helped me.</p>
+        </div>
+      </div>
+    </section>
+  
   <section>
             <img src="headphones.jpg" alt="Noise-Canceling Over-Ear Headphones">
             <h2>2. Noise-Canceling Headphones with Brown Noise or Lo-Fi Playlists</h2>
