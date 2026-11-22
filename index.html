@@ -82,6 +82,48 @@
       cursor: pointer;
     }
     #moreText { margin-top: 30px; background: white; padding: 15px; border-left: 6px solid #3f7d4e; }
+
+     #searchBox { width: 100%; padding: 10px; font-size: 16px; border: 2px solid #3f7d4e; border-radius: 6px; }
+    .result { background: white; padding: 10px 15px; margin-top: 10px; border-radius: 6px; cursor: pointer; border: 1px solid #ccc; }
+    .result:hover { background: #e8f3e8; }
+
+    .about { display: flex; gap: 25px; align-items: flex-start; }
+    .circles { display: flex; flex-direction: column; gap: 15px; }
+    .circles img { width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 3px solid #3f7d4e; background: #eee; }
+    .about .text { flex: 1; }
+
+    footer {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 15px 20px;
+      border: 2px solid #3f7d4e;
+      border-radius: 6px;
+      background: white;
+      font-size: 14px;
+    }
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-top: 3px solid #3f7d4e;
+      display: flex;
+      justify-content: space-around;
+      padding: 6px 0;
+      z-index: 10;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 4px 18px;
+      border-radius: 8px;
+    }
+    nav button span { display: block; font-size: 12px; }
+    nav button:hover { background: #e8f3e8; }
+    nav button.current { background: #cfe6cf; }
     
       <style>
 </head>
