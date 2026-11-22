@@ -45,6 +45,43 @@
 
     .page { display: none; }
     .page.active { display: block; }
+
+    .cards { display: flex; gap: 20px; }
+    .card {
+      flex: 1;
+      background: white;
+      border: 2px solid #3f7d4e;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+
+      }
+    .card:hover { background: #e8f3e8; }
+    .card img { width: 100%; height: 180px; object-fit: contain; background: #eee; border-radius: 6px; }
+    .card h3 { margin: 10px 0 5px; }
+    .card p { margin: 0; font-size: 14px; }
+
+    .intro-box { text-align: center; }
+    .intro-box img { width: 60%; max-height: 300px; object-fit: contain; }
+    .intro-box .text { text-align: left; }
+    .thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
+    .thumbs img { width: 100%; height: 90px; object-fit: contain; background: #eee; border: 2px solid #3f7d4e; border-radius: 6px; cursor: pointer; }
+
+     .detail { display: flex; gap: 25px; align-items: flex-start; }
+    .detail img { width: 40%; border: 3px solid #3f7d4e; border-radius: 8px; background: #eee; }
+    .detail .text { flex: 1; }
+    #downBtn {
+      display: block;
+      margin: 25px auto 0;
+      width: 45px; height: 45px;
+      border-radius: 50%;
+      border: 2px solid #3f7d4e;
+      background: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    #moreText { margin-top: 30px; background: white; padding: 15px; border-left: 6px solid #3f7d4e; }
     
       <style>
 </head>
