@@ -276,7 +276,120 @@
     <button id="nav-search" onclick="showPage('search')">&#128269;<span>Search</span></button>
     <button id="nav-about" onclick="showPage('about')">&#128100;<span>About</span></button>
   </nav>  
-  
+   <script>
+    
+    var tools = {
+      forest: {
+        name: "Forest (Focus Timer App)",
+        img: "images/image1.jpeg",
+        text: "Forest is a gamified Pomodoro timer that keeps you off your phone while reviewing lectures or working on lab exercises. You set a timer, say 25 or 50 minutes, and plant a virtual tree that grows only if you stay inside the app.",
+        label: "Why it works in college",
+        more: "Between class breaks and late-night study sessions, checking social media becomes automatic; Forest breaks that muscle memory by making your study streak visual and rewarding."
+      },
+      headphones: {
+        name: "Noise-Canceling Headphones with Brown Noise or Lo-Fi Playlists",
+        img: "images/image2.jpeg",
+        text: "Pairing over-ear headphones with steady brown noise or instrumental lo-fi beats creates a portable \u201cfocus zone\u201d wherever you are.",
+        label: "Who it suits",
+        more: "College students who study in noisy boarding houses, crowded campus libraries, or busy caf\u00e9s. Unlike songs with lyrics that compete with your reading comprehension, ambient audio blocks out background chatter so you can concentrate on complex coursework."
+      },
+      grayscale: {
+        name: "Smartphone Grayscale Mode During Exam Week",
+        img: "images/image3.jpeg",
+        text: "Available in the accessibility or Digital Wellbeing settings of almost every phone, Grayscale mode strips away all color from your screen, turning bright app icons and video feeds into plain black-and-white.",
+        label: "What I like about it",
+        more: "It is completely free, takes seconds to turn on before midterms or finals, and instantly makes doomscrolling feel boring so you can put your phone down and sleep or study."
+      }
+    };
+
+    var titles = {
+      home: "Staying Focused in College",
+      intro: "Introduction",
+      search: "Search",
+      about: "About"
+    };
+
+    var pageHistory = [];       
+    var currentPage = "home";
+
+    function showPage(id, dontSave) {
+      
+      if (!dontSave && id !== currentPage) {
+        pageHistory.push(currentPage);
+      }
+      var pages = document.querySelectorAll(".page");
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove("active");
+      }
+      document.getElementById(id).classList.add("active");
+      currentPage = id;
+
+      if (titles[id]) {
+        document.getElementById("pageTitle").innerText = titles[id];
+      }
+
+      
+      var buttons = document.querySelectorAll("nav button");
+      for (var j = 0; j < buttons.length; j++) {
+        buttons[j].classList.remove("current");
+      }
+      var navBtn = document.getElementById("nav-" + id);
+      if (navBtn) { navBtn.classList.add("current"); }
+
+      window.scrollTo(0, 0);
+    }
+
+    function openTool(key) {
+      var t = tools[key];
+      document.getElementById("detailImg").src = t.img;
+      document.getElementById("detailImg").alt = t.name;
+      document.getElementById("detailName").innerText = t.name;
+      document.getElementById("detailText").innerText = t.text;
+      document.getElementById("moreLabel").innerText = t.label;
+      document.getElementById("moreBody").innerText = t.more;
+      titles.detail = t.name.split(" (")[0].split(" with")[0];
+      showPage("detail");
+    }
+
+    function goBack() {
+      if (pageHistory.length > 0) {
+        var last = pageHistory.pop();
+        showPage(last, true);
+      }
+    }
+    document.getElementById("backBtn").onclick = goBack;
+
+    function scrollDown() {
+      document.getElementById("moreText").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function doSearch() {
+      var word = document.getElementById("searchBox").value.toLowerCase();
+      var box = document.getElementById("results");
+      box.innerHTML = "";
+      if (word === "") { return; }
+
+      var found = false;
+      for (var key in tools) {
+        var t = tools[key];
+        var all = (t.name + " " + t.text + " " + t.more).toLowerCase();
+        if (all.indexOf(word) !== -1) {
+          var div = document.createElement("div");
+          div.className = "result";
+          div.innerText = t.name;
+          div.setAttribute("onclick", "openTool('" + key + "')");
+          box.appendChild(div);
+          found = true;
+        }
+      }
+      if (!found) {
+        box.innerHTML = "<p>No results found.</p>";
+      }
+    }
+
+   
+    showPage("home", true);
+  </script>
   
 </body>
 </h2>
