@@ -127,4 +127,8 @@
       titles.detail = t.name;
       showPage("detail");
            }
+           document.getElementById("backBtn").onclick = function () {
+      if (pageHistory.length > 0) { showPage(pageHistory.pop(), true); }
+    };
+  </script>
       </main>
