@@ -109,4 +109,12 @@
            var titles = { home: "Staying Focused in College", intro: "Introduction", detail: "", search: "Search", about: "About" };
     var pageHistory = [];
     var currentPage = "home";
+
+           function showPage(id, dontSave) {
+      if (!dontSave && id !== currentPage) { pageHistory.push(currentPage); }
+      document.getElementById(currentPage).hidden = true;
+      document.getElementById(id).hidden = false;
+      currentPage = id;
+      document.getElementById("pageTitle").innerText = titles[id];
+           }
       </main>
