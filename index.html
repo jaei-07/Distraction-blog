@@ -1,1 +1,70 @@
+<!DOCTYPE html>
 
+<html> lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staying Focused in College</title>
+</head>
+<body>
+  <header>
+    <button id="backBtn">&larr;</button>
+    <h1 id="pageTitle">Staying Focused in College</h1>
+  </header>
+   
+  <main>
+    
+    <section id="home">
+      <div>
+        <p>Image 1</p>
+        <h3>Forest (Focus Timer App)</h3>
+        <p>Forest is a gamified Pomodoro timer that keeps you off your phone while reviewing lectures or working on lab exercises.</p>
+        <button onclick="openTool('forest')">Read more</button>
+      </div>
+      <div>
+        <p>Image 2</p>
+        <h3>Noise-Canceling Headphones with Brown Noise or Lo-Fi Playlists</h3>
+        <p>Pairing over-ear headphones with steady brown noise or instrumental lo-fi beats creates a portable "focus zone" wherever you are.</p>
+        <button onclick="openTool('headphones')">Read more</button>
+      </div>
+      <div>
+        <p>Image 3</p>
+        <h3>Smartphone Grayscale Mode During Exam Week</h3>
+        <p>Grayscale mode strips away all color from your screen, turning bright app icons and video feeds into plain black-and-white.</p>
+        <button onclick="openTool('grayscale')">Read more</button>
+      </div>
+      <section id="intro" hidden>
+      <p>Image</p>
+      <h2>Introduction</h2>
+      <p>College comes with a level of freedom that makes staying focused harder than ever. Between heavy coding or study workloads, group chat notifications, and endless scrolling between classes, it is easy to lose hours without finishing a single task.</p>
+      <p>I chose to write about minimizing distractions in college academics because learning how to protect my focus completely changed how I handle exam weeks and project deadlines. Whether you are a freshman adjusting to independent study or an upperclassman juggling major subjects, having a solid system keeps you from burning out on late-night cramming.</p>
+      <p>Here are five practical tools and habits I recommend to help you stay locked in throughout college.</p>
+    </section>
+
+    
+    <section id="detail" hidden>
+      <p id="detailImage">Image 1</p>
+      <h2 id="detailName"></h2>
+      <p id="detailText"></p>
+      <button onclick="document.getElementById('more').scrollIntoView()">&darr;</button>
+      <div id="more">
+        <h3 id="moreLabel"></h3>
+        <p id="moreText"></p>
+      </div>
+    </section>
+
+    
+    <section id="search" hidden>
+      <h2>Search</h2>
+      <input type="text" placeholder="Search tools">
+      <p>Results</p>
+    </section>
+
+   
+    <section id="about" hidden>
+      <p>Image</p>
+      <p>Image</p>
+      <h2>About</h2>
+      <p>Made by Jaybe A. Dela Cruz (ITE-10 FVLM1).</p>
+      <p>This page is about minimizing distractions in college academics.</p>
+    </section>
