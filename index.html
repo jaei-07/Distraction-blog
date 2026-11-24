@@ -117,4 +117,14 @@
       currentPage = id;
       document.getElementById("pageTitle").innerText = titles[id];
            }
+           function openTool(key) {
+      var t = tools[key];
+      document.getElementById("detailImage").innerText = t.image;
+      document.getElementById("detailName").innerText = t.name;
+      document.getElementById("detailText").innerText = t.text;
+      document.getElementById("moreLabel").innerText = t.label;
+      document.getElementById("moreText").innerText = t.more;
+      titles.detail = t.name;
+      showPage("detail");
+           }
       </main>
